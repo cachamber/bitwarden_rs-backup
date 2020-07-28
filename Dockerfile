@@ -16,6 +16,7 @@ ENV GID 100
 ENV CRONFILE /etc/crontabs/root
 ENV LOGFILE /app/log/backup.log
 ENV DELETE_AFTER 0
+ENV COMPRESS false
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 COPY backup.sh /app/
