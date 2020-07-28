@@ -51,6 +51,7 @@ docker run --rm --volumes-from=bitwarden -v /tmp/myBackup:/myBackup --entrypoint
 | LOGFILE | Path to the logfile *inside* the container |
 | CRONFILE | Path to the cron file *inside* the container |
 | DELETE_AFTER | Delete old backups after X many days |
+| COMPRESS | Compress database backups |
 
 ## Common erros
 ### Wrong permissions

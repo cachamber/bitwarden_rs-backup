@@ -52,6 +52,7 @@ services:
       - TIMESTAMP=false
       - UID=0
       - GID=0
+      - COMPRESS=false
 
 volumes:
   bitwarden:

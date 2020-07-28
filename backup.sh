@@ -20,6 +20,11 @@ else
   echo "$(date "+%F %T") - Backup unsuccessfull"
 fi
 
+if [ $COMPRESS = true ]
+then
+  gzip -9 $FINAL_BACKUP_FILE
+fi
+
 if [ ! -z $DELETE_AFTER ] && [ $DELETE_AFTER -gt 0 ]
 then
   find $(dirname "$BACKUP_FILE") -name "$(basename "$BACKUP_FILE")*" -type f -mtime +$DELETE_AFTER -exec rm -f {} \; -exec echo "Deleted {} after $DELETE_AFTER days" \;
